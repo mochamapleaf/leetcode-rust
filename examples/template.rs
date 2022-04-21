@@ -5,7 +5,11 @@ struct Solution;
 //code
 
 
-//test
+fn main(){
+
+}
+
 #[test]
 fn test_solution(){
+    main();
 }

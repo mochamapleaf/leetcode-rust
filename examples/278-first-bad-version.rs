@@ -1,6 +1,3 @@
-//modules
-
-//struct define
 struct Solution;
 //code
 
@@ -12,11 +9,11 @@ impl Solution {
     pub fn first_bad_version(&self, n: i32) -> i32 {
         let mut start = 0;
         let mut end = n as usize;
-        while end > start{
-            let mid = start + ((end - start)>>1);
-            if self.isBadVersion(mid as i32){
+        while end > start {
+            let mid = start + ((end - start) >> 1);
+            if self.isBadVersion(mid as i32) {
                 end = mid;
-            }else{
+            } else {
                 start = mid + 1;
             }
         }
@@ -24,7 +21,11 @@ impl Solution {
     }
 }
 
-//test
+fn main(){
+
+}
+
 #[test]
 fn test_solution(){
+    main();
 }

@@ -3,7 +3,7 @@
 //struct define
 struct Solution;
 //code
-impl Solution
+impl Solution{
     //Loop twice, O(N)
     pub fn count_k_difference(nums: Vec<i32>, k: i32) -> i32 {
         let mut my_map = vec![0_i32; 100]; //use a vector to act as HashMap
@@ -40,7 +40,12 @@ impl Solution
         ret
     }
 }
-//test
+
+fn main(){
+
+}
+
 #[test]
 fn test_solution(){
+    main();
 }

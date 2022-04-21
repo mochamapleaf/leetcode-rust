@@ -3,7 +3,7 @@
 //struct define
 struct Solution;
 //code
-/** 
+/**
  * Forward declaration of guess API.
  * @param  num   your guess
  * @return 	     -1 if num is lower than the guess number
@@ -17,12 +17,13 @@ impl Solution {
     unsafe fn guessNumber_while_if(n: i32) -> i32 {
         let mut start = 1_i32;
         let mut end = n;
-        while end > start{
-            let mid = start + ((end-start + 1)>>1);
-            if guess(mid) >=0{ //evaluating >= will be faster, the compiler can directly look at the signbit
+        while end > start {
+            let mid = start + ((end - start + 1) >> 1);
+            if guess(mid) >= 0 {
+                //evaluating >= will be faster, the compiler can directly look at the signbit
                 start = mid;
-            }else{
-                end = mid-1;
+            } else {
+                end = mid - 1;
             }
         }
         start
@@ -30,16 +31,16 @@ impl Solution {
     unsafe fn guessNumber_loop_match(n: i32) -> i32 {
         let mut start = 1_i32;
         let mut end = n;
-        loop{
-            let mid = start + ((end-start)>>1);
-            match guess(mid){
-                -1 =>{
-                    end = mid-1;
-                },
-                1 =>{
-                    start = mid+1;
-                },
-                _ =>{
+        loop {
+            let mid = start + ((end - start) >> 1);
+            match guess(mid) {
+                -1 => {
+                    end = mid - 1;
+                }
+                1 => {
+                    start = mid + 1;
+                }
+                _ => {
                     //0
                     return mid;
                 }
@@ -48,7 +49,11 @@ impl Solution {
     }
 }
 
-//test
+fn main(){
+
+}
+
 #[test]
 fn test_solution(){
+    main();
 }
