@@ -49,7 +49,7 @@ impl Solution {
     }
 }
 
-fn main(){
+fn main() {
     assert_eq!(Solution::my_atoi("42".to_string()), 42_i32);
     assert_eq!(Solution::my_atoi("   -42".to_string()), -42_i32);
     assert_eq!(Solution::my_atoi("4193 with words".to_string()), 4193);
@@ -62,6 +62,4 @@ fn main(){
 }
 
 #[test]
-fn test_solution(){
-    main();
-}
+fn test_solution() { main(); }

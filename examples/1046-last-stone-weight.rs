@@ -33,12 +33,10 @@ impl Solution {
     }
 }
 
-fn main(){
+fn main() {
     assert_eq!(Solution::last_stone_weight_heap(vec![2, 7, 4, 1, 8, 1]), 1);
     assert_eq!(Solution::last_stone_weight_heap(vec![1]), 1);
 }
 
 #[test]
-fn test_solution(){
-    main();
-}
+fn test_solution() { main(); }

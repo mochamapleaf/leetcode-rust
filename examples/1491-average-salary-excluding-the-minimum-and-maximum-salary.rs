@@ -22,12 +22,10 @@ impl Solution {
     }
 }
 
-fn main(){
+fn main() {
     assert_eq!(Solution::average(vec![4000, 3000, 1000, 2000]), 2500.0);
     assert_eq!(Solution::average(vec![1000, 2000, 3000]), 2000.0);
 }
 
 #[test]
-fn test_solution(){
-    main();
-}
+fn test_solution() { main(); }

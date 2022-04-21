@@ -42,12 +42,10 @@ impl Solution {
     }
 }
 
-fn main(){
+fn main() {
     assert_eq!(Solution::largest_perimeter_hand(vec![2, 1, 2]), 5);
     assert_eq!(Solution::largest_perimeter_hand(vec![1, 2, 1]), 0);
 }
 
 #[test]
-fn test_solution(){
-    main();
-}
+fn test_solution() { main(); }
