@@ -22,3 +22,7 @@ Interview-02-03 - same as 237, ignored
 2160
 1672 - iterator practice
 763
+
+Partially Solved:
+32
+398
