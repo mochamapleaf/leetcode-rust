@@ -16,4 +16,6 @@ impl Solution {
 fn main() {}
 
 #[test]
-fn test_solution() { main(); }
+fn test_solution() {
+    main();
+}

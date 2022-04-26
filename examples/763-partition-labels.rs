@@ -11,7 +11,7 @@ impl Solution {
         let mut ret_vec = Vec::new();
         let my_s = s.into_bytes();
         let mut start = 0;
-        while start < my_s.len(){
+        while start < my_s.len() {
             let mut right_limit = my_s.len() - 1;
             while my_s[right_limit] != my_s[start] {
                 right_limit -= 1;
@@ -34,22 +34,22 @@ impl Solution {
     }
     //Optimize using Dict (Doesn't need hashmap, since we have only 26 characters)
     //0ms, 2MB
-    pub fn partition_labels_opt(s: String) -> Vec<i32>{
+    pub fn partition_labels_opt(s: String) -> Vec<i32> {
         let s = s.into_bytes();
         let mut dict_vec = vec![usize::MAX; 26]; //the initial value doesn't matter, if we need it, we have it
         let mut ret_vec = Vec::new();
-        for i in 0..s.len(){
-            dict_vec[(s[i]-b'a') as usize] = i;
+        for i in 0..s.len() {
+            dict_vec[(s[i] - b'a') as usize] = i;
         }
         let mut start = 0;
-        while start < s.len(){
-            let mut last = dict_vec[(s[start]-b'a') as usize];
-            let mut i = start+1;
-            while i < last{
-                last = std::cmp::max(dict_vec[(s[i]-b'a') as usize], last);
+        while start < s.len() {
+            let mut last = dict_vec[(s[start] - b'a') as usize];
+            let mut i = start + 1;
+            while i < last {
+                last = std::cmp::max(dict_vec[(s[i] - b'a') as usize], last);
                 i += 1;
             }
-            ret_vec.push((last-start) as i32 + 1);
+            ret_vec.push((last - start) as i32 + 1);
             start = last + 1;
         }
         ret_vec
@@ -57,9 +57,17 @@ impl Solution {
 }
 
 fn main() {
-    assert_eq!(Solution::partition_labels_opt("ababcbacadefegdehijhklij".to_string()), vec![9,7,8]);
-    assert_eq!(Solution::partition_labels_opt("caedbdedda".to_string()), vec![1,9]);
+    assert_eq!(
+        Solution::partition_labels_opt("ababcbacadefegdehijhklij".to_string()),
+        vec![9, 7, 8]
+    );
+    assert_eq!(
+        Solution::partition_labels_opt("caedbdedda".to_string()),
+        vec![1, 9]
+    );
 }
 
 #[test]
-fn test_solution() { main(); }
+fn test_solution() {
+    main();
+}

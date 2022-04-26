@@ -9,18 +9,21 @@ impl Solution {
         let mut dp = vec![0; s.len()];
         let mut sb = s.into_bytes();
         let mut max_val = 0;
-        for i in 1..sb.len(){
+        for i in 1..sb.len() {
             //if is '(', return 0
-            if sb[i] == b'(' { continue; }
-            let mut temp = dp[i-1];
-            if i == temp{
+            if sb[i] == b'(' {
+                continue;
+            }
+            let mut temp = dp[i - 1];
+            if i == temp {
                 //Single ')', like in ())
                 continue;
             }
-            if sb[i-temp-1] == b'('{
+            if sb[i - temp - 1] == b'(' {
                 temp += 2;
-                if i >= temp{ //the last matching '(' might not have a value before it ()
-                    temp += dp[i-temp];
+                if i >= temp {
+                    //the last matching '(' might not have a value before it ()
+                    temp += dp[i - temp];
                 }
                 dp[i] = temp;
                 max_val = std::cmp::max(max_val, temp);
@@ -33,4 +36,6 @@ impl Solution {
 fn main() {}
 
 #[test]
-fn test_solution() { main(); }
+fn test_solution() {
+    main();
+}
