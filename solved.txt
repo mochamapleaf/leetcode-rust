@@ -29,7 +29,7 @@ Interview-03-05 - Sorting stack
 1844 - unsafe practice
 1614 - iter practice(fold)
 1684 - iter practice, HashSet
-
+lcp-17
 
 Partially Solved:
 32
