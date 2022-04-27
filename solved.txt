@@ -23,6 +23,12 @@ Interview-02-03 - same as 237, ignored
 1672 - iterator practice
 763
 Interview-03-05 - Sorting stack
+344 - std implementation - Vec::reverse()
+1221
+1689 - iter practice(one line)
+1844 - unsafe practice
+1614 - iter practice(fold)
+1684 - iter practice, HashSet
 
 
 Partially Solved:

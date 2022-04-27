@@ -38,15 +38,6 @@ impl SortedStack {
     }
 }
 
-/**
- * Your SortedStack object will be instantiated and called as such:
- * let obj = SortedStack::new();
- * obj.push(val);
- * obj.pop();
- * let ret_3: i32 = obj.peek();
- * let ret_4: bool = obj.is_empty();
- */
-
 fn main() {}
 
 #[test]
