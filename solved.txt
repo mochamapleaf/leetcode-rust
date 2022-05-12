@@ -30,7 +30,9 @@ Interview-03-05 - Sorting stack
 1614 - iter practice(fold)
 1684 - iter practice, HashSet
 lcp-17
-231 - std practice
+231 - std practice, count_ones(), is_positive()
+342 - std practice, count_ones(), trailing_zeros()
+
 
 Partially Solved:
 32
