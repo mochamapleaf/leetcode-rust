@@ -104,11 +104,16 @@ impl Solution_Reservoir_Sampling {
 
 
 fn main() {
-    let mut test_struct = Solution_Hash::new(vec![1,2,3,3,3]);
-    for i in 0..100{
-        print!("{} ", test_struct.pick(3));
+    let test_list = vec![1,2,3,3,3];
+    let test_val = vec![3;1000];
+    let mut test_struct = Solution_oneline_iter::new(test_list.clone());
+    //print!("[");
+    for &v in test_val.iter(){
+        let result = test_struct.pick(v);
+        assert_eq!(test_list[result as usize], v);
+        //print!("{}, ", result);
     }
-    println!();
+    //println!("]");
 }
 
 #[test]
